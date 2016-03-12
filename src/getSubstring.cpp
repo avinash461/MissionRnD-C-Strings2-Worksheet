@@ -16,8 +16,29 @@ original String
 
 #include <stddef.h>
 #include <stdlib.h>
-
+int get_len(char *temp);
 char * get_sub_string(char *str, int i, int j){
+	if (str && i <= j && i >= 0){
+		int len = get_len(str);
+		char *sub_str;
+		sub_str = (char *)malloc(sizeof(char)*(j - i));
+		int index = 0;
+		for (int k = i; k <= j; k++){
+				sub_str[index++] = str[k];
+			}
+			sub_str[index] = NULL;
+			return sub_str;
+	}
+	return NULL;
+}
+int get_len(char *temp)
+{
+	int length = 0;
+	while (*temp)
+	{
+		length++;
+		temp++;
+	}
+	return length;
 
-    return NULL;
 }
