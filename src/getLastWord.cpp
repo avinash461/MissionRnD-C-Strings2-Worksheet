@@ -10,8 +10,6 @@ Note:Dont modify original string Neglect Spaces at the right end and at left end
 */
 #include <stdlib.h>
 #include <Stdio.h>
-int get_length(char *temp);
-int rightSpace(char *str, int len);
 char * get_last_word(char * str){
 	int len = 0, l_wrd_start = -1, l_wrd_end = 0;
 	char *last_wrd;
